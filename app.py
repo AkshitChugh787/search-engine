@@ -1,8 +1,9 @@
 from flask import Flask, render_template, request
 from tabulate import tabulate
 import pandas as pd
+import os
+app = Flask(__name__, static_folder='docs', template_folder='docs')
 
-app = Flask(__name__)
 
 def search_dataframe(df, keywords):
     all_columns = df.apply(lambda x: ' '.join(x.astype(str)), axis=1)

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search Results</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <style>
+      body {
+        background: linear-gradient(to bottom, #1b243e, #1a1f3d);
+        color: #fff;
+        font-family: "Roboto", sans-serif;
+      }
+
+      .container {
+        margin-top: 50px;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 50px;
+        text-shadow: 2px 2px rgba(0, 0, 0, 0.4);
+      }
+
+      a.button {
+        background-color: #007aff;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+        text-decoration: none;
+        margin-bottom: 30px;
+        display: inline-block;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 500;
+      }
+
+      a.button:hover {
+        background-color: #0063cc;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 50px;
+      }
+
+      table th,
+      table td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+
+      table th {
+        background-color: #007aff;
+        color: #fff;
+        text-transform: uppercase;
+      }
+
+      table tr:hover {
+        background-color: rgba(0, 123, 255, 0.2);
+      }
+
+      table tr:hover td {
+        color: #fff;
+      }
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007aff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 500;
+      }
+      .button:hover {
+        background-color: #0063cc;
+      }
+      @media screen and (max-width: 768px) {
+        h1 {
+          font-size: 2.5rem;
+          margin-bottom: 30px;
+        }
+        table {
+          width: 100%;
+        }
+      }
+      .warning-message {
+        background-color: #ff0000;
+        color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a href="/" class="button">Search Again</a>
+      <h1>Search Results</h1>
+      {% if table %} {{ table|safe }} {% else %}
+      <div class="warning-message">{{ message }}</div>
+      {% endif %}
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </body>
+</html>

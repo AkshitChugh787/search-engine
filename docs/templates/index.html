@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search Engine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <style>
+      body {
+        background: linear-gradient(to bottom, #1b243e, #1a1f3d);
+        color: #fff;
+        font-family: "Roboto", sans-serif;
+      }
+      .container {
+        margin-top: 50px;
+      }
+      h1 {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 50px;
+        text-shadow: 2px 2px rgba(0, 0, 0, 0.4);
+      }
+      form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+      }
+      input[type="text"] {
+        padding: 10px;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        width: 50%;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #fff;
+      }
+      input[type="submit"] {
+        background-color: #007aff;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+        margin-left: 10px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 500;
+      }
+      input[type="submit"]:hover {
+        background-color: #0063cc;
+      }
+      @media screen and (max-width: 768px) {
+        h1 {
+          font-size: 2.5rem;
+          margin-bottom: 30px;
+        }
+        form {
+          flex-direction: column;
+        }
+        input[type="text"] {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+        input[type="submit"] {
+          margin-left: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Search Engine</h1>
+      <form method="POST" action="/search">
+        <input
+          type="text"
+          name="keywords"
+          autocomplete="off"
+          placeholder="Enter keyword..."
+        />
+        <input type="submit" value="Search" />
+      </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </body>
+</html>
